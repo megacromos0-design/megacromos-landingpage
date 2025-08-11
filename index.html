@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MegaCromos — Cadernetas Personalizadas</title>
+  <meta name="description" content="Adquira já a sua caderneta e transforme cada momento em uma memória inesquecível.">
+  <style>
+    :root{--primary:#c2185b;--accent:#d32f2f;--bg:#ffffff;--text:#111;--card:#ffffff;--shadow:0 8px 24px rgba(0,0,0,.10);--radius:18px;--yellow:#ffeb3b}
+    *{box-sizing:border-box} html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    a{text-decoration:none;color:inherit} .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(8px);border-bottom:1px solid #eee}
+    .nav-inner{height:64px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:800;letter-spacing:.3px;display:flex;gap:10px;align-items:center}
+    .dot{width:10px;height:10px;border-radius:50%;background:var(--primary)}
+    .nav ul{list-style:none;display:flex;gap:16px;margin:0;padding:0;font-weight:700}
+    .nav a{padding:8px 10px;border-radius:10px} .nav a:hover{background:#f3f3f5}
+    .cta-small{background:var(--primary);color:#fff;padding:8px 12px;border-radius:10px}
+    .hero{background:linear-gradient(135deg,var(--accent),var(--primary));color:#fff;padding:60px 0 48px;border-bottom-left-radius:24px;border-bottom-right-radius:24px;box-shadow:var(--shadow)}
+    .hero .badge{opacity:.95;margin:0 0 8px}
+    .hero h1{font-size:44px;line-height:1.08;margin:0} .hero h1 .break{display:block}
+    .hero .sub{margin:10px 0 22px;opacity:.95}
+    .hero .cta{display:inline-block;background:var(--yellow);color:#111;font-weight:900;padding:14px 22px;border-radius:12px}
+    .hero .subcta{display:inline-block;margin-left:12px;color:#fff;text-decoration:underline}
+    section{padding:56px 0} .grid{display:grid;gap:22px} .grid-2{grid-template-columns:repeat(2,1fr)} .grid-3{grid-template-columns:repeat(3,1fr)}
+    @media (max-width:900px){.grid-2,.grid-3{grid-template-columns:1fr}.hero h1{font-size:34px}}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px}
+    h2{color:var(--primary);margin:0 0 14px}
+    .block{white-space:pre-line}
+    details{border:1px solid #eee;border-radius:14px;padding:14px;background:#fff} details+details{margin-top:10px} summary{cursor:pointer;font-weight:800}
+    footer{background:#111;color:#eee;padding:32px 0;margin-top:24px}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="brand"><span class="dot"></span><span data-key="brand">MegaCromos</span></div>
+      <ul>
+        <li><a href="#inicio" data-key="nav_inicio"></a></li>
+        <li><a href="#contatos" data-key="nav_contatos"></a></li>
+        <li><a href="#faq" data-key="nav_faq"></a></li>
+        <li><a href="#sobre" data-key="nav_sobre"></a></li>
+        <li><a href="#pais" data-key="nav_portugal"></a></li>
+        <li><a href="#servicos" data-key="nav_servicos"></a></li>
+        <li><a class="cta-small" href="#comprar" data-key="nav_adquira"></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header id="inicio" class="hero">
+    <div class="container">
+      <p class="badge" data-key="hero_badge"></p>
+      <h1><span class="break" data-key="hero_title_line1"></span><span class="break" data-key="hero_title_line2"></span><span class="break" data-key="hero_title_line3"></span></h1>
+      <p class="sub" data-key="hero_sub"></p>
+      <a class="cta" href="#comprar" data-key="cta_primary"></a>
+      <a class="subcta" href="#comecar" data-key="cta_secondary"></a>
+    </div>
+  </header>
+
+  <main>
+    <section id="sobre">
+      <div class="container grid grid-2">
+        <div class="card">
+          <h2 data-key="sobre_title"></h2>
+          <p class="block" data-key="servicos_bloco"></p>
+        </div>
+        <div class="card">
+          <h2 data-key="cadernetas_title"></h2>
+          <p><strong data-key="cadernetas_sub"></strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos">
+      <div class="container">
+        <h2 data-key="servicos_title"></h2>
+        <div class="grid grid-3">
+          <div class="card"><h3 data-key="serv1_title"></h3></div>
+          <div class="card"><h3 data-key="serv2_title"></h3></div>
+          <div class="card"><h3 data-key="serv3_title"></h3></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="comprar">
+      <div class="container grid grid-2">
+        <div class="card">
+          <h2 data-key="comecar_title"></h2>
+          <a class="cta" href="mailto:megacromos0@gmail.com?subject=Quero%20adquirir%20a%20minha%20caderneta" data-key="cta_primary"></a>
+        </div>
+        <div class="card" id="comecar">
+          <h2 class="block" data-key="falta_title"></h2>
+          <p><a class="cta" target="_blank" rel="noopener" id="faltaLink">Preencher formulário</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <p class="block" style="color:#555" data-key="faq_intro"></p>
+        <h2 data-key="faq_title"></h2>
+        <div class="grid">
+          <details class="card"><summary class="block" data-key="faq_q1"></summary><p class="block" data-key="faq_a1"></p></details>
+          <details class="card"><summary class="block" data-key="faq_q2"></summary><p class="block" data-key="faq_a2"></p></details>
+          <details class="card"><summary class="block" data-key="faq_q3"></summary><p class="block" data-key="faq_a3"></p></details>
+          <details class="card"><summary class="block" data-key="faq_q4"></summary><p class="block" data-key="faq_a4"></p></details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contatos">
+      <div class="container grid grid-3">
+        <div class="card"><h2 data-key="brand"></h2></div>
+        <div class="card">
+          <h2 data-key="contacts_title"></h2>
+          <p>📧 <span data-key="email"></span></p>
+          <p>📱 <span data-key="phone1"></span></p>
+          <p>📱 <span data-key="phone2"></span></p>
+        </div>
+        <div class="card"><h2 data-key="help"></h2></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap">
+      <div data-key="footer"></div>
+      <div><a href="#sobre">Sobre nós</a> · <a href="#faq">FAQ's</a> · <a href="#contatos">Contactos</a></div>
+    </div>
+  </footer>
+
+  <script>
+    fetch('/content/site.json').then(r=>r.json()).then(data=>{
+      document.querySelectorAll('[data-key]').forEach(el=>{
+        const key=el.getAttribute('data-key'); if(data[key]!==undefined) el.innerText=data[key];
+      });
+      const falta=document.getElementById('faltaLink'); if(falta && data.falta_link){falta.href=data.falta_link;}
+    });
+  </script>
+</body>
+</html>
